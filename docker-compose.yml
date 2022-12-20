@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      target: $NODE_ENV
+    container_name: preserve_logger_api
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/usr/src/app
