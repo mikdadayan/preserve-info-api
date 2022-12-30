@@ -7,7 +7,9 @@ import { JwtAuthGuard } from "./auth/jwt-auth.guard";
 @Controller()
 export class AppController {
   constructor(
+    // eslint-disable-next-line no-unused-vars
     private readonly appService: AppService,
+    // eslint-disable-next-line no-unused-vars
     private authService: AuthService
   ) {}
 

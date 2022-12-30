@@ -5,6 +5,7 @@ import { LogService } from "./log.service";
 
 @Controller("logs")
 export class LogController {
+  // eslint-disable-next-line no-unused-vars
   constructor(private readonly logsService: LogService) {}
 
   @Get()
